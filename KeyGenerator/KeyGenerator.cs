@@ -121,9 +121,9 @@ namespace Mark.KeyGenerator
         ///     The last 5 characters are random Base36 number between 0 and 36 ^ 5.
         /// </summary>
         /// <returns>Returns a unique, sequential, 20-character Base36 string</returns>
-        public string NewId()
+        public string New()
         {
-            return NewId(false);
+            return New(false);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Mark.KeyGenerator
         ///     The last 3 characters are random number less than 46655 additional for additional uniqueness.
         /// </summary>
         /// <returns>Returns a unique, sequential, 16-character Base36 string</returns>
-        public string NewId(bool delimited)
+        public string New(bool delimited)
         {
             // Keep access sequential so threads cannot accidentally
             // read another thread's values within this method:
